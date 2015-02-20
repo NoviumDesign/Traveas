@@ -1,0 +1,253 @@
+.intro
+  background-color: #000000
+  width: 100%
+  background-size: cover
+  background-position: center
+  background-image: url('/_System/assets/img/golfer.jpg')
+  position: relative
+  p
+    display: none
+    @include breakpoint($medium-screen)
+      display: block
+
+  .intro-text
+    @include padding(13px)
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    color: #FFFFFF
+    max-width: 740px
+    @include breakpoint($medium-screen)
+      @include padding(30px)
+
+section.center
+  @include span(full)
+  @include padding(45px 15px 45px 15px)
+  background-color: #000000
+  padding-top: 35px
+  padding-bottom: 35px
+  @include breakpoint($medium-screen)
+    @include padding(65px 15px 65px 15px)
+    text-align: center
+  h2
+    color: #FFFFFF
+  p
+    margin: 0
+    color: rgba(255, 255, 255, 0.8)
+    max-width: 26em
+    margin-left: auto
+    margin-right: auto
+
+.front-cta
+  @extend %button
+  background-color: #99ff3e
+  color: #000000
+  margin-top: 10px
+
+footer
+  background-color: #191919
+  min-height: 200px
+  position: relative
+  text-align: center
+  padding-top: 40px
+  span
+    @include position(absolute, null 10px 10px null)
+    color: #4c4c4c
+    font-size: 13px
+  .logos
+    display: inline-block
+
+
+section.products
+  @include clearfix
+  img
+    margin-left: 10px
+  hr
+    margin: 12px 0 13px 0
+
+  .sport-plus
+    color: #000000
+    hr
+      border-bottom: 1px solid #000000
+    .front,
+    .back
+      background-color: #99ff3e
+    h2
+      color: #0047c8
+    button
+      background: none
+      border: 1px solid
+      &:hover
+        background-color: #FFFFFF
+        border-color: #FFFFFF
+      color: #4c4c4c
+  .sport-studio
+    hr
+      border-bottom: 1px solid #FFFFFF
+    .front,
+    .back
+      background-color: #09005c
+      color: rgba(255, 255, 255, 0.9)
+    h2
+      color: #FFFFFF
+  .brands
+    color: #000000
+    h2
+      color: #000000
+    hr
+      border-bottom: 1px solid #000000
+    .front,
+    .back
+      background-color: #FFFFFF
+    button
+      border-color: #4c4c4c
+      color: #4c4c4c
+      &:hover
+        background-color: #4c4c4c
+        border-color: #4c4c4c
+        color: #FFFFFF
+
+.card-container
+  -webkit-perspective: 1000
+  -moz-perspective: 1000
+  -ms-perspective: 1000
+  perspective: 1000
+  -ms-transform: perspective(1000px)
+  -moz-transform: perspective(1000px)
+  -moz-transform-style: preserve-3d
+  -ms-transform-style: preserve-3d
+  @include span(full no-gutters)
+  @include breakpoint($large-screen)
+    @include span(33.3333% no-gutters)
+
+.card-container.active .flipper
+  -webkit-transform: rotateY(180deg)
+  -moz-transform: rotateY(180deg)
+  -ms-transform: rotateY(180deg)
+  transform: rotateY(180deg)
+
+.button-wrapper
+  @include position(absolute, null 0 30px 0)
+  text-align: center
+  width: 100%
+  button
+    background: none
+    border: 1px solid
+    &:hover
+      background-color: #FFFFFF
+      border-color: #FFFFFF
+      color: #4c4c4c
+
+.flipper, .front, .back
+  width: 100%
+  min-height: 600px
+
+.flipper
+  -webkit-transition: 0.8s
+  -webkit-transform-style: preserve-3d
+  -ms-transition: 0.8s
+  -moz-transition: 0.8s
+  -moz-transform: perspective(1000px)
+  -moz-transform-style: preserve-3d
+  -ms-transform-style: preserve-3d
+  transition: 0.8s
+  transform-style: preserve-3d
+  position: relative
+
+.front,
+.back
+  @include padding(30px 13px 30px 13px)
+  @include breakpoint($medium-screen)
+    @include padding(30px)
+  -webkit-backface-visibility: hidden
+  -moz-backface-visibility: hidden
+  -ms-backface-visibility: hidden
+  backface-visibility: hidden
+  -webkit-transition: 0.8s
+  -webkit-transform-style: preserve-3d
+  -webkit-transform: rotateY(0deg)
+  -moz-transition: 0.8s
+  -moz-transform-style: preserve-3d
+  -moz-transform: rotateY(0deg)
+  -o-transition: 0.8s
+  -o-transform-style: preserve-3d
+  -o-transform: rotateY(0deg)
+  -ms-transition: 0.8s
+  -ms-transform-style: preserve-3d
+  -ms-transform: rotateY(0deg)
+  transition: 0.8s
+  transform-style: preserve-3d
+  transform: rotateY(0deg)
+  position: absolute
+  top: 0
+  left: 0
+
+.front
+  -webkit-transform: rotateY(0deg)
+  -ms-transform: rotateY(0deg)
+  z-index: 2
+  p
+    margin-bottom: 60px
+
+.back
+  -webkit-transform: rotateY(-180deg)
+  -moz-transform: rotateY(-180deg)
+  -o-transform: rotateY(-180deg)
+  -ms-transform: rotateY(-180deg)
+  transform: rotateY(-180deg)
+
+.case
+  @include span(full)
+  @include padding(10px)
+  background-size: cover
+  background-position: center
+  background-image: url('/_System/assets/img/hammarby.jpg')
+  color: #FFFFFF
+  p
+    max-width: 800px
+  @include breakpoint($medium-screen)
+    @include padding(30px)
+
+.contact-us
+  display: none
+  z-index: 1
+  background-color: #191919
+  opacity: 0
+  transition: all 0.8s
+  @include position(fixed, 0 0 0 0)
+  &.active
+    transition: all 0.8s
+    display: block
+    opacity: 1
+
+section.brands
+  @include span(full)
+  @include clearfix
+  img
+    display: block
+  .half
+    @include span(full no-gutters)
+    @include breakpoint($medium-screen)
+      @include span(50% no-gutters)
+  .quarter
+    @include span(full no-gutters)
+    @include breakpoint($medium-screen)
+      @include span(25% no-gutters)
+
+section.full
+  @include span(full no-gutters)
+  background-color: #191919
+  padding-top: 45px
+  padding-bottom: 42px
+
+ul.checkmarks
+  @include span(8 of 12)
+  @include push(3 of 12)
+  li
+    background-image: url('/_System/assets/img/icons/check.svg')
+    background-repeat: no-repeat
+    background-position: center left
+    background-size: 20px 20px
+    padding-left: 34px
+    margin-bottom: 4px

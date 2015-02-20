@@ -1,0 +1,23 @@
+.sub-page
+  section.bg-img
+    @include span(full)
+    height: 400px
+    background-size: cover
+    background-position: center center
+    background-attachment: fixed
+
+  section.text
+    @include span(full)
+    padding-left: 15px
+    padding-right: 15px
+    padding-top: 40px
+    padding-bottom: 40px
+    @include breakpoint($medium-screen)
+      @include span(6 of 12)
+      @include push(3 of 12)
+      padding-top: 57px
+      padding-bottom: 60px
+
+  hr
+    margin-top: 25px
+    border-bottom: 12px solid #FFFFFF

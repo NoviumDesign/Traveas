@@ -1,0 +1,57 @@
+body
+  padding: 14px
+  word-wrap: break-word
+
+header.site-header
+  @include position(fixed, 16px 16px null 16px)
+  z-index: 2
+  img
+    @include position(absolute, 10px 10px null 10px)
+    @include breakpoint($medium-screen)
+      @include position(absolute, 30px 30px null 30px)
+  .logo-mobile
+    @include breakpoint($medium-screen)
+      display: none
+  .logo-desktop
+    display: none
+    @include breakpoint($medium-screen)
+      display: block
+
+.icon
+  display: inline-block
+  width: 25px
+  height: 25px
+
+.frame
+  position: fixed
+  border-color: #FFFFFF
+  border-width: 7px
+  border-style: solid
+  z-index: 9999
+
+.top-frame
+  @extend .frame
+  top: 0
+  right: 0
+  left: 0
+
+.right-frame
+  @extend .frame
+  top: 0
+  right: 0
+  bottom: 0
+
+.bottom-frame
+  @extend .frame
+  right: 0
+  left: 0
+  bottom: 0
+
+.left-frame
+  @extend .frame
+  top: 0
+  left: 0
+  bottom: 0
+
+footer
+  @include span(full)

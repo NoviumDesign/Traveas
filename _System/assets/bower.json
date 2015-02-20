@@ -1,0 +1,27 @@
+{
+  "name": "Traveas",
+  "version": "0.0.0",
+  "authors": [
+    "Anton Kjörck Lindén <anton@noviumdesign.se>"
+  ],
+  "description": "Site for Traveas sport media",
+  "main": "sass/application.sass",
+  "license": "private",
+  "homepage": "noviumdesign.se",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.0",
+    "susy": "~2.2.2",
+    "jquery": "~2.1.3",
+    "compass-breakpoint": "~2.5.0",
+    "modernizr": "~2.8.3",
+    "matchHeight": "~0.5.2"
+  }
+}

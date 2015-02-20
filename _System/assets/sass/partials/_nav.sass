@@ -1,0 +1,73 @@
+.toggle-menu
+  @include position(absolute, 10px 10px null null)
+  cursor: pointer
+  z-index: 2
+  height: 44px
+  color: #000000
+  @include breakpoint($medium-screen)
+    @include position(absolute, 30px 30px null null)
+
+  .text
+    @include padding(8px)
+    font-family: helvetica, arial, sans-serif
+    float: left
+    background-color: #FFFFFF
+    font-size: 16px
+    height: 33px
+    display: none
+    @include breakpoint($medium-screen)
+      display: block  
+  .icon
+    @include padding(8px 8px 8px 8px)
+    margin-left: 1px
+    height: 33px
+    width: 36px
+    float: left
+    background-color: #FFFFFF
+    background-image: url('/_System/assets/img/icons/menu.svg')
+    background-repeat: no-repeat    
+    background-position: center center
+
+nav.main-menu
+  background-color: #191919
+  @include position(fixed, 14px 14px 14px 14px)
+  opacity: 0
+  transform-origin: center center
+  -o-transform: scal(.2)
+  -webkit-transform: scale(.2)
+  -moz-transform: scale(.2),rotate(.01deg)
+  transform: scale(.2)
+  transition: all .5s ease-in-out
+  .products
+    display: none
+    margin-left: 30px
+    &.active
+      display: block
+    a
+      font-family: "apex-new-book"
+
+nav.main-menu.in
+  opacity: 1
+  -o-transform: scale(1)
+  -webkit-transform: scale(1)
+  -moz-transform: scale(1),rotate(0)
+  transform: scale(1)
+  -webkit-transition-delay: .5s
+  transition-delay: .5s
+
+.nav-wrapper
+  text-align: center
+  .products
+
+  ul.nav
+    display: inline-block
+  ul
+    text-align: left
+  a
+    font-family: 'apex-new-bold'
+    font-size: $h1-font-size
+    text-transform: uppercase
+    color: #FFFFFF
+    line-height: 1.3em
+    &:hover
+      color: #999999

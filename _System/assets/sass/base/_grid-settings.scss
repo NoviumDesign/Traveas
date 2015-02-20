@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+$susy: (
+  global-box-sizing: border-box,
+);
+
+$medium-screen: em(640);
+$large-screen: em(860);
